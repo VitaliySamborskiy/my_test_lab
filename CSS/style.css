@@ -1,0 +1,582 @@
+/*fonts*/
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans 400';
+    font-weight: 400;
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'), 
+    url('../fonts/OpenSans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans 600';
+    font-weight: 600;
+    src: url('../fonts/open-sans-v36-latin-600.woff2') format('woff2'), 
+    url('../fonts/open-sans-v36-latin-600.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans Condensed';
+    font-weight: 700;
+    src: url('../fonts/OpenSansCondensed-Bold.woff2') format('woff2'),
+     url('../fonts/OpenSansCondensed-Bold.woff') format('woff');
+}
+
+/*color*/
+
+:root {
+    --black-background-color: #333333;
+    --gold-fonts-color: #D1A954;
+    --white-fonts-color: #FFFFFF;
+    --not-active-drinking-white: #C4C4C4;
+    --black-backgroud-transparency-color: rgba(51, 51, 51, 0.75);
+    --border-input-color: #616161;
+    --background-input-color: #444; 
+    --text-input-color: #989898;
+    --footer-line: #565656;
+    --titel-font: 'Open Sans Condensed';
+    --text-font: 'Open Sans 400';
+    --input-font: 'Open Sans 600';
+}
+
+/*base*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--black-background-color);
+    color: var(--white-fonts-color);
+    font-family: var(--text-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family:var(--titel-font);
+    font-weight: 700;
+    margin: 0;
+}
+
+a {
+    font-family: var(--titel-font);
+    padding: 0;
+    font-weight: 700;
+    color: var(--white-fonts-color);
+}
+
+ul, p {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.header-nav, .main-button, .sitebar-text {
+    font-family: var(--titel-font);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+header::before,
+.main-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/theater_hall.svg');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+.header-nav, .sitebar-list-items, .main-hover, span, path, .productions-img, .productions-search {
+    transition: all 0.3s ease;
+}
+
+/*header*/
+
+.header-link-list {
+    width: 822px;
+    justify-content: space-between;
+}
+
+.header-list {
+    justify-content: space-between;
+    margin: 50px auto 189px;
+}
+
+.text-header {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-bottom: 2px solid var(--gold-fonts-color);
+    padding-bottom: 6px;
+}
+
+.header-nav:hover {
+    border-bottom: 2px solid var(--gold-fonts-color);
+    padding-bottom: 6px;
+}
+
+/*sitebar*/
+
+.sitebar-position {
+    position: absolute;
+    bottom: 85px;
+    left: 62px;
+}
+
+.sitebar {
+    background-color: var(--black-backgroud-transparency-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+}
+
+.line-sitbar {
+    background-color: var(--not-active-drinking-white);
+    width: 3px;
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+.sitebar-list {
+    gap: 30px;
+}
+
+.sitebar-text {
+    color: var(--not-active-drinking-white);
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    margin-bottom: 40px;
+}
+
+/*hover-sitebar*/
+
+.sitebar-list-items:hover path {
+    fill: var(--gold-fonts-color);
+    fill-opacity: 1;
+}
+
+/*main-page*/
+
+.main-page {
+    gap: 71px;
+    margin-bottom: 360px;
+}
+
+.main-page-swiper {
+    margin-bottom: 36px;
+    width: 350px;
+    height: 490px;
+}
+
+.titel-main-page {
+    font-size: 48px;
+    letter-spacing: 4.8px;
+    margin-bottom: 50px;
+}
+
+.main-gap-button {
+    color: var(--not-active-drinking-white);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.maim-gap-button {
+    gap: 10px;
+}
+
+.main-link-list {
+    gap: 93px;
+}
+
+.text-main-page {
+    gap: 30px;
+    max-width: 591px;
+    margin-bottom: 46px;
+}
+
+.main-button {
+    color: var(--white-fonts-color);
+    background-color: var(--gold-fonts-color);
+    width: 160px;
+    height: 50px;
+}
+
+/*main-page-hover*/
+
+.main-button:hover {
+    color: var(--gold-fonts-color);
+    border: var(--gold-fonts-color) solid 2px;
+}
+
+.main-hover:hover path,
+.main-hover:hover span {
+    color: var(--white-fonts-color);
+    fill: var(--white-fonts-color);
+}
+
+/*theater-inform*/
+
+.span-theater {
+    color: var(--gold-fonts-color);
+}
+
+.titel-section {
+    font-size: 64px;
+    letter-spacing: 6.4px;
+    margin-bottom: 78px;
+    
+}
+
+.theater-titel {
+    font-size: 21px;
+    letter-spacing: 2.1px;
+    margin-bottom: 40px;
+}
+
+.theater-text {
+    width: 445px;
+}
+
+.theater-titel-text {
+    font-family: var(--titel-font);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.theater-text-magin {
+    margin-bottom: 25px;
+}
+
+.theater-svg-magin {
+    margin-bottom: 15px;
+}
+
+.theater-container {
+    margin-bottom: 150px;
+}
+
+/*scrol-section*/
+
+.productions-section {
+    margin-bottom: 114px;
+}
+
+.swiper-container-2 {
+    width: 1770px;
+    margin-left: 150px;
+}
+
+.productions-img {
+    opacity: 0.35;
+    position: relative;
+}
+
+.productions-search {
+    position: absolute;
+    top: 225px;
+    left: 171px;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.productions-titel,
+.productions-date {
+    position: absolute;
+    left: 40px;
+}
+
+.productions-titel {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    top: 40px;
+}
+
+.productions-date {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    bottom: 40px;
+}
+
+/*productions-section-hover*/
+
+.swiper-slide:hover .productions-img {
+    opacity: 1;
+}
+
+.swiper-slide:hover .productions-search {
+    opacity: 1;
+}
+
+.swiper-slide:hover .productions-titel,
+.swiper-slide:hover .productions-date {
+    opacity: 0;
+}
+
+/*awards-section*/
+
+.awards-section {
+    padding: 162px 209px 125px 190px;
+    background: url(../img/background-theater.jpg) center/cover no-repeat;
+    margin-bottom: 175px;
+}
+
+.awards-info {
+    margin-left: 103px;
+    padding-top: 15px;
+}
+
+.awards-img {
+    margin-bottom: 25px;
+}
+.awards-text {
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.theater-titel-awards {
+    font-size: 72px;
+    letter-spacing: 7.2px;
+}
+
+/*partners-section*/
+
+.partners-titel {
+    margin-bottom: 137px;
+}
+
+.swiper-container-3,
+.swiper-container-4 {
+    width: 1110px;
+    margin: 0 auto;;
+}
+
+.swiper-container-3 {
+    margin-bottom: 129px;
+}
+
+.swiper-container-4 {
+    margin-bottom: 124px;
+}
+
+/*contact-section*/
+
+.section-contact {
+    margin-bottom: 80px;
+}
+
+.contact-button {
+    width: 190px;
+}
+
+.input-contact-colors {
+    background-color: var(--background-input-color);
+    border: var(--background-input-color) solid 1.2px;
+    color: var(--text-input-color);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.input-contact-with {
+    padding: 0 15px;
+    height: 35px;
+    width: 180px;
+}
+
+.contact-list {
+    font-size: 16px;
+    gap: 25px;
+    margin-right: 44px;
+}
+
+.contact-text {
+    color: var(--text-input-color);
+    font-size: 12px;
+    width: 390px;
+    line-height: 1.5;
+}
+
+.input-block {
+    margin-bottom: 30px;
+}
+
+.input-list {
+    gap: 30px;
+}
+
+.contact-info {
+    gap: 150px;
+}
+
+.margin-imput {
+    margin-bottom: 35px;
+}
+
+.input-contact-messge {
+    padding: 15px;
+    width: 310px;
+    height: 100px;
+}
+
+/*input-focus*/
+
+.input-contact-colors:focus {
+    border: var(--gold-fonts-color) solid 2px;
+    outline: none;
+}
+
+/*footer*/
+
+.line-footer {
+    background-color: var(--footer-line);
+    margin: 0 auto 30px;
+}
+
+.footer-text {
+    color: var(--text-input-color);
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+
+/*desktop-page*/
+
+@media (max-width: 1920px) {
+    .container-sm {
+        max-width: 1110px;
+    }
+}
+
+/*12 Grids — Large ≥992px*/
+
+@media (max-width:1450px ) {
+    .container-sm {
+        width: 731px;
+        padding-left: 41px;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .margin-adaptive {
+        margin-left: 150px;
+        margin-right: auto;
+    }
+
+    .header-link-list {
+        max-width: 100%;
+        margin-bottom: 50px;
+        gap: 1.5%;
+    }
+
+    .header-list {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .hidden-swiper {
+        display: none;
+    }
+    .text-header  {
+        max-width: max-content;
+        margin: 0 auto 208px;
+    }
+    .main-page {
+        gap: 0;
+        margin-bottom: 465px;
+    }
+    .text-main-page {
+        max-width: 690px;
+        margin-bottom: 39px;
+    }
+    .titel-main-page {
+        margin-bottom: 17px;
+    }
+
+    
+
+    .theater-img {
+        display: none;
+    }
+    .titel-section {
+        margin-bottom: 100px;
+    }
+    .theater-container {
+        margin-bottom: 169px;
+    }
+    .theater-margin {
+        gap: 30px;
+    }
+
+    .productions-section{
+        margin-bottom: 170px;
+    }
+
+    .swiper-container-2 {
+        margin: 0;
+    }
+    .swiper-container-hidden {
+        width: 731px;
+        overflow: hidden;
+        padding-left: 41px;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .awards-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 105px 111px 106px 191px;
+    }  
+
+    .partners-titel {
+        margin-bottom: 130px;
+    }
+
+    .swiper-container-3 {
+        margin-bottom: 89px;
+    }
+
+    .swiper-container-4 {
+        margin-bottom: 189px;
+    }
+
+    .contact-revers {
+        flex-direction: column-reverse;  
+    }
+
+    .contact-list {
+        display: flex !important;
+    }
+    .form-margin {
+        margin-bottom: 80px;
+    }
+    .input-contact-messge {
+        width: 270px;
+    }
+    .contact-info {
+        gap: 110px;
+    }
+
+}
